@@ -47,7 +47,7 @@ module Assently
 
     def file
       begin
-        open path, authentication_params
+        URI.parse(path).host ? URI.open(path, authentication_params) : URI.open(path)
       rescue OpenURI::HTTPError => error
         raise Assently::CouldNotFetchDocumentError.new("Could not get url #{path} (#{error.message})")
       end

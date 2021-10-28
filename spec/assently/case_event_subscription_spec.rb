@@ -1,17 +1,19 @@
-require "spec_helper"
-require "assently/case_event_subscription"
+require 'assently/case_event_subscription'
 
-module Assently
-  RSpec.describe CaseEventSubscription do
-    describe "events" do
-      it "accepts a valid event" do
-        case_event_subscription = CaseEventSubscription.new([CaseEventSubscription.events.first], 'http://test.com')
+RSpec.describe Assently::CaseEventSubscription do
+  describe '#initialize' do
+    let(:case_event_subscription) { described_class.new(events, 'http://example.com') }
+    let(:events) { [described_class::EVENTS.sample] }
 
-        expect(case_event_subscription.events.first).to eq(CaseEventSubscription.events.first)
-      end
+    it 'accepts a known event' do
+      expect(case_event_subscription.events).to eq(events)
+    end
 
-      it "throws an error if it is an unknown event" do |variable|
-        expect{ CaseEventSubscription.new(['invalid_event'], 'http://test.com') }.to raise_error(ArgumentError)
+    context 'when one of the provided events is unknown' do
+      let(:events) { %w[whatevs] }
+
+      it 'raises the exception' do
+        expect { case_event_subscription }.to raise_error(ArgumentError)
       end
     end
   end

@@ -1,4 +1,3 @@
-require "spec_helper"
 require "assently/api_mappers/party_mapper"
 
 module Assently

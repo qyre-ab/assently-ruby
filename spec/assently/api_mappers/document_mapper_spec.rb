@@ -1,4 +1,3 @@
-require "spec_helper"
 require "assently/api_mappers/document_mapper"
 
 module Assently

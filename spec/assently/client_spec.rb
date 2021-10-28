@@ -1,4 +1,3 @@
-require "spec_helper"
 require "assently/client"
 
 RSpec.describe Assently::Client do

@@ -1,4 +1,3 @@
-require "spec_helper"
 require "assently/case_event_subscription"
 require "assently/api_mappers/case_event_subscription_mapper"
 

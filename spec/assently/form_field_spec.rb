@@ -1,4 +1,3 @@
-require "spec_helper"
 require "assently/form_field"
 
 module Assently

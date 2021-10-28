@@ -1,5 +1,3 @@
-require "spec_helper"
-
 require "assently/api_mappers/form_field_mapper"
 require "assently/form_field"
 

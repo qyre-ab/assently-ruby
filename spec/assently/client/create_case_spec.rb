@@ -1,5 +1,4 @@
 require "luhn"
-require "spec_helper"
 
 require "assently/client"
 require "assently/case"

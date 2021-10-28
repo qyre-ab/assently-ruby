@@ -1,4 +1,3 @@
-require "spec_helper"
 require "assently/api_mappers/case_options_mapper"
 
 module Assently

@@ -1,5 +1,3 @@
-require "spec_helper"
-
 require "assently/case"
 require "assently/serializers/case_serializer"
 

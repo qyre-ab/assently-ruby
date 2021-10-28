@@ -1,4 +1,3 @@
-require "spec_helper"
 require "assently/party"
 
 module Assently

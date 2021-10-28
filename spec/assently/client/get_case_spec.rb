@@ -1,6 +1,5 @@
 require "luhn"
 require "securerandom"
-require "spec_helper"
 
 require "assently/client"
 require "assently/case"

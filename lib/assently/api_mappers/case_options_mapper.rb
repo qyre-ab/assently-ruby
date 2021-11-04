@@ -61,6 +61,9 @@ module Assently
             { "ExpireOn" => value.iso8601 }
           },
           remind_ander_days: "RemindAfterDays",
+          remind_on: ->(value) {
+            { "RemindOn" => value.iso8601 }
+          },
           template_id: "TemplateId",
           is_editable: "IsEditable",
           event_callback: ->(value) {
